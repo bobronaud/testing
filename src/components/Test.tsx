@@ -2,7 +2,7 @@ import { Box, Typography, Button } from '@mui/material';
 
 import Stepper from './Stepper';
 import Timer from './Timer';
-import Question from './question';
+import QuestionRoot from './question';
 
 const Test = () => {
   return (
@@ -25,7 +25,7 @@ const Test = () => {
         <Timer />
       </Box>
       <Stepper />
-      <Question />
+      <QuestionRoot />
     </Box>
   );
 };
