@@ -1,4 +1,5 @@
-import { Box, Typography, Button } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 import Stepper from './Stepper';
 import Timer from './Timer';
@@ -17,9 +18,10 @@ const Test = () => {
         justifyContent: 'space',
         alignItems: 'start',
         gap: 3,
-      }}>
+      }}
+    >
       <Box sx={{ display: 'flex', gap: 3 }}>
-        <Typography variant='h4' component='h1'>
+        <Typography variant="h4" component="h1">
           Тестирование
         </Typography>
         <Timer />

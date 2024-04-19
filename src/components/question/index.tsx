@@ -1,10 +1,10 @@
-import type { Question as QuestionType } from '../../slices/testSlice';
-import { useAppSelector } from '../../app/hooks';
-
 import ChooseOne from './ChooseOne';
 import ChooseMany from './ChooseMany';
 import Fill from './Fill';
 import Detailed from './Detailed';
+
+import type { Question as QuestionType } from '../../slices/testSlice';
+import { useAppSelector } from '../../app/hooks';
 
 type Questions = {
   [key: string]: () => JSX.Element;

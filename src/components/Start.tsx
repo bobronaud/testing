@@ -1,4 +1,8 @@
-import { Box, Button, FormControlLabel, Switch, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+import Typography from '@mui/material/Typography';
 
 import type { Question } from '../slices/testSlice';
 import { setPhase, uploadQuestions } from '../slices/testSlice';
@@ -22,15 +26,16 @@ const Start = () => {
         justifyContent: 'center',
         alignItems: 'center',
         gap: 3,
-      }}>
-      <Typography variant='h4' component='h1'>
+      }}
+    >
+      <Typography variant="h4" component="h1">
         Тестирование
       </Typography>
       <FormControlLabel
         control={<Switch defaultChecked />}
-        label='Ограничение по времени: 5 мин'
+        label="Ограничение по времени: 5 мин"
       />
-      <Button variant='contained' onClick={handleclick}>
+      <Button variant="contained" onClick={handleclick}>
         Начать
       </Button>
     </Box>

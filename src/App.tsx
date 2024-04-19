@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import Box from '@mui/material/Box';
 
 import Start from './components/Start';
 import Test from './components/Test';
@@ -25,7 +25,8 @@ const App = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-      }}>
+      }}
+    >
       <Phase />
     </Box>
   );
