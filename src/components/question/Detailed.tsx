@@ -52,9 +52,9 @@ const Detailed = () => {
       <Typography variant="h6" component="h3" sx={{ my: 1 }}>
         {currentQuestion?.question}
       </Typography>
-      <FormControl error={error}>
+      <FormControl sx={{ width: '100%' }} error={error}>
         <TextField
-          sx={{ width: 500 }}
+          fullWidth
           autoFocus
           multiline
           rows={5}

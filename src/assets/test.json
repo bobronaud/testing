@@ -18,16 +18,16 @@
     "rightAnswer": "колодец"
   },
   {
-    "type": "detailed",
-    "question": "Опишите кратко процесс фотосинтеза.",
-    "answers": null,
-    "rightAnswer": null
-  },
-  {
     "type": "chooseOne",
     "question": "Какое домашнее животное издает по ночам звук 'тыгыдык-тыгыдык'?",
     "answers": ["Собака", "Хомяк", "Кот", "Попугай"],
     "rightAnswer": "Кот"
+  },
+  {
+    "type": "detailed",
+    "question": "Опишите кратко процесс фотосинтеза.",
+    "answers": null,
+    "rightAnswer": null
   },
   {
     "type": "chooseOne",
@@ -48,15 +48,15 @@
     "rightAnswer": "умами"
   },
   {
-    "type": "detailed",
-    "question": "Продолжите поговорку: 'Два сапога пара, ...'",
-    "answers": null,
-    "rightAnswer": "да оба левые"
-  },
-  {
     "type": "chooseOne",
     "question": "Священным животным какой страны является единорог?",
     "answers": ["Шотландии", "Индонезии", "Исландии", "Чили"],
     "rightAnswer": "Шотландии"
+  },
+  {
+    "type": "fill",
+    "question": "Продолжите поговорку: 'Два сапога пара, ...'",
+    "answers": null,
+    "rightAnswer": "да оба левые"
   }
 ]
