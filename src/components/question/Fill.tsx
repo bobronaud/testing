@@ -6,7 +6,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { useAppSelector, useAppDispatch } from '../../store/hooks';
+import { useAppSelector, useAppDispatch } from '../../hooks';
 import { writeAnswer, finishStep } from '../../store/slices/testSlice';
 
 const Fill = () => {

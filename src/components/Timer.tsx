@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import { useAppDispatch, useAppSelector } from '../store/hooks';
+import { useAppDispatch, useAppSelector } from '../hooks';
 import { setPhase, setTime } from '../store/slices/testSlice';
 
 const Timer = () => {

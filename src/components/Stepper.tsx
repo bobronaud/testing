@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { useAppSelector } from '../store/hooks';
+import { useAppSelector } from '../hooks';
 
 const Stepper = () => {
   const theme = useTheme();

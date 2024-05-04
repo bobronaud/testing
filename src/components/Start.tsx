@@ -10,7 +10,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 import type { Question } from '../store/slices/testSlice';
 import { setPhase, setTimer, uploadQuestions } from '../store/slices/testSlice';
-import { useAppDispatch } from '../store/hooks';
+import { useAppDispatch } from '../hooks';
 import data from '../assets/test.json';
 
 const Start = () => {

@@ -4,7 +4,7 @@ import Fill from './Fill';
 import Detailed from './Detailed';
 
 import type { Question as QuestionType } from '../../store/slices/testSlice';
-import { useAppSelector } from '../../store/hooks';
+import { useAppSelector } from '../../hooks';
 
 type Questions = {
   [key: string]: () => JSX.Element;
