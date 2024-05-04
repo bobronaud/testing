@@ -7,7 +7,7 @@ import Stepper from './Stepper';
 import Timer from './Timer';
 import QuestionRoot from './question';
 
-import { useAppSelector } from '../app/hooks';
+import { useAppSelector } from '../store/hooks';
 
 const Test = () => {
   const theme = useTheme();

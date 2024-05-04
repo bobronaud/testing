@@ -8,8 +8,8 @@ import FormHelperText from '@mui/material/FormHelperText';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { writeAnswer, finishStep } from '../../slices/testSlice';
+import { useAppSelector, useAppDispatch } from '../../store/hooks';
+import { writeAnswer, finishStep } from '../../store/slices/testSlice';
 
 type AnswersState = {
   [key: string]: boolean;

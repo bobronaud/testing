@@ -8,9 +8,9 @@ import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import type { Question } from '../slices/testSlice';
-import { setPhase, setTimer, uploadQuestions } from '../slices/testSlice';
-import { useAppDispatch } from '../app/hooks';
+import type { Question } from '../store/slices/testSlice';
+import { setPhase, setTimer, uploadQuestions } from '../store/slices/testSlice';
+import { useAppDispatch } from '../store/hooks';
 import data from '../assets/test.json';
 
 const Start = () => {

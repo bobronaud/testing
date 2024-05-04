@@ -4,8 +4,8 @@ import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { useAppSelector, useAppDispatch } from '../app/hooks';
-import { setPhase, resetProgress } from '../slices/testSlice';
+import { useAppSelector, useAppDispatch } from '../store/hooks';
+import { setPhase, resetProgress } from '../store/slices/testSlice';
 
 const Finish = () => {
   const dispatch = useAppDispatch();

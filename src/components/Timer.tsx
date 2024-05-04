@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import { useAppDispatch, useAppSelector } from '../app/hooks';
-import { setPhase, setTime } from '../slices/testSlice';
+import { useAppDispatch, useAppSelector } from '../store/hooks';
+import { setPhase, setTime } from '../store/slices/testSlice';
 
 const Timer = () => {
   const dispatch = useAppDispatch();

@@ -7,9 +7,9 @@ import Start from './components/Start';
 import Test from './components/Test';
 import Finish from './components/Finish';
 
-import type { Phase } from './slices/testSlice';
-import { useAppSelector, useAppDispatch } from './app/hooks';
-import { setDataApp, setPhase } from './slices/testSlice';
+import type { Phase } from './store/slices/testSlice';
+import { useAppSelector, useAppDispatch } from './store/hooks';
+import { setDataApp, setPhase } from './store/slices/testSlice';
 
 type Phases = {
   [key: string]: () => JSX.Element;
