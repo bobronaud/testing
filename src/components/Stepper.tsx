@@ -22,8 +22,8 @@ const Stepper = () => {
       {isDesktopUsing ? (
         <Box sx={{ width: '100%', marginLeft: '-8px' }}>
           <StepperMui nonLinear activeStep={currentStep}>
-            {steps.map((_, index) => (
-              <Step key={index} completed={completedSteps[index]}>
+            {steps.map((item, index) => (
+              <Step key={item} completed={completedSteps[index]}>
                 <StepLabel disabled></StepLabel>
               </Step>
             ))}

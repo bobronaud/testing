@@ -38,18 +38,18 @@ const Finish = () => {
         switch (item.type) {
           case 'chooseOne': {
             return (
-              <Box key={index}>
+              <Box key={item.question}>
                 <Typography sx={{ mb: 1 }} variant="body1" component="h3">
                   {`${index + 1}. ${item.question}`}
                 </Typography>
-                {item.answers?.map((answer, i) => {
+                {item.answers?.map((answer) => {
                   let colorAnswer = 'black';
                   if (answer === item.rightAnswer) colorAnswer = 'green';
                   if (answer === item.userAnswer && answer !== item.rightAnswer)
                     colorAnswer = 'red';
                   const isUserAnswer = answer === item.userAnswer ? 'subtitle2' : 'body2';
                   return (
-                    <Typography key={i} color={colorAnswer} variant={isUserAnswer}>
+                    <Typography key={answer} color={colorAnswer} variant={isUserAnswer}>
                       - {answer}
                     </Typography>
                   );
@@ -59,11 +59,11 @@ const Finish = () => {
           }
           case 'chooseMany': {
             return (
-              <Box key={index}>
+              <Box key={item.question}>
                 <Typography sx={{ mb: 1 }} variant="body1" component="h3">
                   {`${index + 1}. ${item.question}`}
                 </Typography>
-                {item.answers?.map((answer, i) => {
+                {item.answers?.map((answer) => {
                   let colorAnswer = 'black';
                   if (item.rightAnswer?.includes(answer)) colorAnswer = 'green';
                   if (
@@ -76,7 +76,7 @@ const Finish = () => {
                     : 'body2';
 
                   return (
-                    <Typography key={i} color={colorAnswer} variant={isUserAnswer}>
+                    <Typography key={answer} color={colorAnswer} variant={isUserAnswer}>
                       - {answer}
                     </Typography>
                   );
@@ -86,7 +86,7 @@ const Finish = () => {
           }
           case 'fill': {
             return (
-              <Box key={index}>
+              <Box key={item.question}>
                 <Typography sx={{ mb: 1 }} variant="body1" component="h3">
                   {`${index + 1}. ${item.question}`}
                 </Typography>
@@ -101,7 +101,7 @@ const Finish = () => {
           }
           case 'detailed': {
             return (
-              <Box key={index}>
+              <Box key={item.question}>
                 <Typography sx={{ mb: 1 }} variant="body1" component="h3">
                   {`${index + 1}. ${item.question}`}
                 </Typography>

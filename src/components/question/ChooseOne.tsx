@@ -42,8 +42,8 @@ const ChooseOne = () => {
       </Typography>
       <FormControl error={error}>
         <RadioGroup value={value} onChange={handleRadioChange}>
-          {currentQuestion?.answers?.map((item, index) => (
-            <FormControlLabel key={index} value={item} control={<Radio />} label={item} />
+          {currentQuestion?.answers?.map((item) => (
+            <FormControlLabel key={item} value={item} control={<Radio />} label={item} />
           ))}
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>

@@ -55,9 +55,9 @@ const ChooseMany = () => {
       </Typography>
       <FormControl error={error}>
         <FormGroup>
-          {currentQuestion?.answers?.map((item, index) => (
+          {currentQuestion?.answers?.map((item) => (
             <FormControlLabel
-              key={index}
+              key={item}
               control={
                 <Checkbox checked={answers[item]} onChange={handleChange} name={item} />
               }
