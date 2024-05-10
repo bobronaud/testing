@@ -18,7 +18,7 @@ type Completed = {
   [key: number]: boolean;
 };
 
-interface State {
+export type State = {
   timer: boolean;
   time: [number, number];
   phase: Phase | null;
@@ -27,7 +27,7 @@ interface State {
   currentStep: number;
   completedSteps: Completed;
   result: Answer[];
-}
+};
 const initialState: State = {
   timer: true,
   time: [5, 0],
