@@ -10,7 +10,7 @@ describe('тест компонента ChooseMany', () => {
       timer: false,
       time: [5, 0],
       phase: 'inProcess',
-      questions: [chooseMany],
+      questions: [chooseMany, chooseOne],
       currentQuestion: chooseMany,
       currentStep: 0,
       completedSteps: {},
@@ -46,19 +46,6 @@ describe('тест компонента ChooseMany', () => {
   });
 
   test('работоспособность сабмита', async () => {
-    const initialState = {
-      test: {
-        timer: false,
-        time: [5, 0],
-        phase: 'inProcess',
-        questions: [chooseMany, chooseOne],
-        currentQuestion: chooseMany,
-        currentStep: 0,
-        completedSteps: {},
-        result: [],
-      } as State,
-    };
-
     const { getByRole, getByText, queryByText } = renderWithRedux(
       <ChooseMany />,
       initialState,
