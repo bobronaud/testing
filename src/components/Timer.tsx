@@ -35,6 +35,7 @@ const Timer = () => {
 
   return (
     <Box
+      data-testid='timer'
       sx={{
         width: '50px',
         display: 'flex',
@@ -43,8 +44,7 @@ const Timer = () => {
         border: 'solid 1px black',
         borderRadius: '3px',
         padding: '0 10px',
-      }}
-    >
+      }}>
       <Typography>{timeStringify()}</Typography>
     </Box>
   );

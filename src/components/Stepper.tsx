@@ -20,7 +20,7 @@ const Stepper = () => {
   return (
     <>
       {isDesktopUsing ? (
-        <Box sx={{ width: '100%', marginLeft: '-8px' }}>
+        <Box data-testid='stepper' sx={{ width: '100%', marginLeft: '-8px' }}>
           <StepperMui nonLinear activeStep={currentStep}>
             {steps.map((item, index) => (
               <Step key={item} completed={completedSteps[index]}>
@@ -30,7 +30,7 @@ const Stepper = () => {
           </StepperMui>{' '}
         </Box>
       ) : (
-        <Typography variant="body1">{`Вопрос ${currentStep + 1}/${
+        <Typography data-testid='stepper' variant='body1'>{`Вопрос ${currentStep + 1}/${
           questions.length
         }`}</Typography>
       )}
