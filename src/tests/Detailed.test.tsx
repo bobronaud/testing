@@ -17,10 +17,9 @@ describe('тест компонента Detailed', () => {
       result: [],
     } as State,
   };
-  test('отрисовка вопроса', () => {
-    const { getByText } = renderWithRedux(<Detailed />, initialState);
-    const question = getByText(detailed.question);
-    expect(question).toBeInTheDocument();
+  test('отрисовка', () => {
+    const container = renderWithRedux(<Detailed />, initialState);
+    expect(container).toMatchSnapshot();
   });
 
   test('работа инпута', async () => {

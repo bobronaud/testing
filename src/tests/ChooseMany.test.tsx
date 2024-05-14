@@ -18,14 +18,9 @@ describe('тест компонента ChooseMany', () => {
     } as State,
   };
 
-  test('отрисовка вопроса и ответов', () => {
-    const { getByText } = renderWithRedux(<ChooseMany />, initialState);
-
-    expect(getByText(chooseMany.question)).toBeInTheDocument();
-
-    chooseMany.answers.forEach((answer) => {
-      expect(getByText(answer)).toBeInTheDocument();
-    });
+  test('отрисовка', () => {
+    const container = renderWithRedux(<ChooseMany />, initialState);
+    expect(container).toMatchSnapshot();
   });
 
   test('ошибка при сабмите без выбранного ответа', async () => {

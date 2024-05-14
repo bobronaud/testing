@@ -18,13 +18,9 @@ describe('тест компонента ChooseOne', () => {
     } as State,
   };
 
-  test('отрисовка вопроса и ответов', () => {
-    const { getByText } = renderWithRedux(<ChooseOne />, initialState);
-    const question = getByText(chooseOne.question);
-    expect(question).toBeInTheDocument();
-    chooseOne.answers.forEach((answer) => {
-      expect(getByText(answer)).toBeInTheDocument();
-    });
+  test('отрисовка', () => {
+    const container = renderWithRedux(<ChooseOne />, initialState);
+    expect(container).toMatchSnapshot();
   });
 
   test('ошибка при сабмите без выбора ответа', async () => {

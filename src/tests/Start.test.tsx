@@ -18,20 +18,9 @@ describe('тест компонента Start', () => {
       result: [],
     } as State,
   };
-  test('отрисовка всех элементов', () => {
-    const { getByText, getByRole, getByLabelText } = renderWithRedux(
-      <Start />,
-      initialState,
-    );
-    const header = getByText(/тестирование/i);
-    const cheker = getByRole('checkbox');
-    const chekerLabel = getByLabelText(/Ограничение по времени: 5мин/i);
-    const btn = getByRole('button', { name: /начать/i });
-
-    const elements = [header, cheker, chekerLabel, btn];
-    elements.forEach((element) => {
-      expect(element).toBeInTheDocument();
-    });
+  test('отрисовка', () => {
+    const container = renderWithRedux(<Start />, initialState);
+    expect(container).toMatchSnapshot();
   });
 
   test('работоспособность чекера', async () => {

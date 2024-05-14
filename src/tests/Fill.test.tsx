@@ -18,10 +18,9 @@ describe('тест компонента Fill', () => {
     } as State,
   };
 
-  test('отрисовка вопроса', () => {
-    const { getByText } = renderWithRedux(<Fill />, initialState);
-    const question = getByText(fill.question);
-    expect(question).toBeInTheDocument();
+  test('отрисовка', () => {
+    const container = renderWithRedux(<Fill />, initialState);
+    expect(container).toMatchSnapshot();
   });
 
   test('работа инпута', async () => {

@@ -18,16 +18,8 @@ describe('тест компонента Test.tsx', () => {
   };
 
   test('отрисовка с таймером', () => {
-    const { getByText, getByTestId } = renderWithRedux(<Test />, initialState);
-    const header = getByText(/тестирование/i);
-    const timer = getByTestId('timer');
-    const stepper = getByTestId('stepper');
-    const question = getByText(chooseMany.question);
-
-    const elements = [header, timer, stepper, question];
-    elements.forEach((element) => {
-      expect(element).toBeInTheDocument();
-    });
+    const container = renderWithRedux(<Test />, initialState);
+    expect(container).toMatchSnapshot();
   });
 
   test('отрисовка без таймера', () => {
