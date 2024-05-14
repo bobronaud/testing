@@ -1,6 +1,6 @@
 import Test from '../components/Test';
 import { State } from '../store/slices/testSlice';
-import { chooseMany } from './fixtures/questionsData';
+import { chooseMany } from './__fixtures__/questionsData';
 import renderWithRedux from './helpers/renderWithRedux';
 
 describe('тест компонента Test.tsx', () => {

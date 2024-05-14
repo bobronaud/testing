@@ -8,7 +8,7 @@ export type Question = {
   rightAnswer: string | string[] | null;
 };
 
-type Answer = Question & {
+export type Answer = Question & {
   userAnswer: string;
 };
 
@@ -45,9 +45,7 @@ const testSlice = createSlice({
   reducers: {
     writeAnswer: (state, action: PayloadAction<string | string[]>) => {
       const userAnswer = action.payload;
-      const answer = Object.assign(state.currentQuestion as Question, {
-        userAnswer,
-      }) as Answer;
+      const answer = { ...state.currentQuestion, userAnswer } as Answer;
       state.result = [...state.result, answer];
     },
     finishStep: (state) => {

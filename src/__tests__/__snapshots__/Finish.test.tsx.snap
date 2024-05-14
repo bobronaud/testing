@@ -1,0 +1,328 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`тест компоннета Finish отрисовка 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiBox-root css-77wrse"
+        data-testid="finishPage"
+      >
+        <h1
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter css-ph2xsj-MuiTypography-root"
+        >
+          Итоги теста
+        </h1>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-body1 css-10oj567-MuiTypography-root"
+          >
+            1. Выберите несколько вариантов. Какие поэты относятся к серебрянному веку?
+          </h3>
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 css-xm40w2-MuiTypography-root"
+          >
+            - 
+            Анна Ахматова
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-p3tpbg-MuiTypography-root"
+          >
+            - 
+            Осип Мандельштам
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-l8el4q-MuiTypography-root"
+          >
+            - 
+            Александр Пушкин
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-l8el4q-MuiTypography-root"
+          >
+            - 
+            Антон Чехов
+          </p>
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-body1 css-10oj567-MuiTypography-root"
+          >
+            2. Какое домашнее животное издает по ночам звук 'тыгыдык-тыгыдык'?
+          </h3>
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 css-qyxumz-MuiTypography-root"
+          >
+            - 
+            Собака
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-l8el4q-MuiTypography-root"
+          >
+            - 
+            Хомяк
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-p3tpbg-MuiTypography-root"
+          >
+            - 
+            Кот
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-l8el4q-MuiTypography-root"
+          >
+            - 
+            Попугай
+          </p>
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-body1 css-10oj567-MuiTypography-root"
+          >
+            3. Вставьте пропущенное слово из пословицы. Не плюй в _____, пригодится воды напиться
+          </h3>
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 css-ati914-MuiTypography-root"
+          >
+            - Ваш ответ: 
+            короткий ответ
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+          >
+            - Верный ответ: 
+            колодец
+          </p>
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-body1 css-10oj567-MuiTypography-root"
+          >
+            4. Опишите кратко процесс фотосинтеза.
+          </h3>
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2 css-ati914-MuiTypography-root"
+          >
+            - Ваш ответ: 
+            длинный ответ
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+          >
+            - Верный ответ: -
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+          >
+            *Требуется проверка преподователем
+          </p>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-2k1wi7-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Пройти еще раз
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiBox-root css-77wrse"
+      data-testid="finishPage"
+    >
+      <h1
+        class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter css-ph2xsj-MuiTypography-root"
+      >
+        Итоги теста
+      </h1>
+      <div
+        class="MuiBox-root css-0"
+      >
+        <h3
+          class="MuiTypography-root MuiTypography-body1 css-10oj567-MuiTypography-root"
+        >
+          1. Выберите несколько вариантов. Какие поэты относятся к серебрянному веку?
+        </h3>
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-xm40w2-MuiTypography-root"
+        >
+          - 
+          Анна Ахматова
+        </h6>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-p3tpbg-MuiTypography-root"
+        >
+          - 
+          Осип Мандельштам
+        </p>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-l8el4q-MuiTypography-root"
+        >
+          - 
+          Александр Пушкин
+        </p>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-l8el4q-MuiTypography-root"
+        >
+          - 
+          Антон Чехов
+        </p>
+      </div>
+      <div
+        class="MuiBox-root css-0"
+      >
+        <h3
+          class="MuiTypography-root MuiTypography-body1 css-10oj567-MuiTypography-root"
+        >
+          2. Какое домашнее животное издает по ночам звук 'тыгыдык-тыгыдык'?
+        </h3>
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-qyxumz-MuiTypography-root"
+        >
+          - 
+          Собака
+        </h6>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-l8el4q-MuiTypography-root"
+        >
+          - 
+          Хомяк
+        </p>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-p3tpbg-MuiTypography-root"
+        >
+          - 
+          Кот
+        </p>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-l8el4q-MuiTypography-root"
+        >
+          - 
+          Попугай
+        </p>
+      </div>
+      <div
+        class="MuiBox-root css-0"
+      >
+        <h3
+          class="MuiTypography-root MuiTypography-body1 css-10oj567-MuiTypography-root"
+        >
+          3. Вставьте пропущенное слово из пословицы. Не плюй в _____, пригодится воды напиться
+        </h3>
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-ati914-MuiTypography-root"
+        >
+          - Ваш ответ: 
+          короткий ответ
+        </h6>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+        >
+          - Верный ответ: 
+          колодец
+        </p>
+      </div>
+      <div
+        class="MuiBox-root css-0"
+      >
+        <h3
+          class="MuiTypography-root MuiTypography-body1 css-10oj567-MuiTypography-root"
+        >
+          4. Опишите кратко процесс фотосинтеза.
+        </h3>
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-ati914-MuiTypography-root"
+        >
+          - Ваш ответ: 
+          длинный ответ
+        </h6>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+        >
+          - Верный ответ: -
+        </p>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+        >
+          *Требуется проверка преподователем
+        </p>
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-2k1wi7-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        Пройти еще раз
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

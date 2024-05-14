@@ -1,7 +1,7 @@
 import userEvent from '@testing-library/user-event';
 import Fill from '../components/question/Fill';
 import { State } from '../store/slices/testSlice';
-import { chooseMany, fill } from './fixtures/questionsData';
+import { chooseMany, fill } from './__fixtures__/questionsData';
 import renderWithRedux from './helpers/renderWithRedux';
 
 describe('тест компонента Fill', () => {

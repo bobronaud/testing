@@ -7,6 +7,7 @@ Object {
     <div>
       <div
         class="MuiBox-root css-10rx6g"
+        data-testid="testCard"
       >
         <div
           class="MuiBox-root css-6lzzp6"
@@ -201,6 +202,7 @@ Object {
   "container": <div>
     <div
       class="MuiBox-root css-10rx6g"
+      data-testid="testCard"
     >
       <div
         class="MuiBox-root css-6lzzp6"

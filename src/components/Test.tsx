@@ -27,9 +27,9 @@ const Test = () => {
   };
 
   return (
-    <Box sx={style}>
+    <Box sx={style} data-testid='testCard'>
       <Box sx={{ display: 'flex', gap: 3 }}>
-        <Typography variant="h4" component="h1">
+        <Typography variant='h4' component='h1'>
           Тестирование
         </Typography>
         {timer && <Timer />}

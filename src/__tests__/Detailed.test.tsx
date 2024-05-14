@@ -1,7 +1,7 @@
 import userEvent from '@testing-library/user-event';
 import Detailed from '../components/question/Detailed';
 import { State } from '../store/slices/testSlice';
-import { chooseOne, detailed } from './fixtures/questionsData';
+import { chooseOne, detailed } from './__fixtures__/questionsData';
 import renderWithRedux from './helpers/renderWithRedux';
 
 describe('тест компонента Detailed', () => {

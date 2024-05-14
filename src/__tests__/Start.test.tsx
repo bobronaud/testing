@@ -2,7 +2,7 @@ import userEvent from '@testing-library/user-event';
 import Start from '../components/Start';
 import { State } from '../store/slices/testSlice';
 import renderWithRedux from './helpers/renderWithRedux';
-import { chooseMany, chooseOne } from './fixtures/questionsData';
+import { chooseMany, chooseOne } from './__fixtures__/questionsData';
 import { getByTestId } from '@testing-library/react';
 
 describe('тест компонента Start', () => {

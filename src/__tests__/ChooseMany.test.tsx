@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event';
 import ChooseMany from '../components/question/ChooseMany';
-import { chooseMany, chooseOne } from './fixtures/questionsData';
+import { chooseMany, chooseOne } from './__fixtures__/questionsData';
 import renderWithRedux from './helpers/renderWithRedux';
 import { State } from '../store/slices/testSlice';
 

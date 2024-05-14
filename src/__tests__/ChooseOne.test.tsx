@@ -1,7 +1,7 @@
 import userEvent from '@testing-library/user-event';
 import ChooseOne from '../components/question/ChooseOne';
 import { Question, State } from '../store/slices/testSlice';
-import { chooseMany, chooseOne } from './fixtures/questionsData';
+import { chooseMany, chooseOne } from './__fixtures__/questionsData';
 import renderWithRedux from './helpers/renderWithRedux';
 
 describe('тест компонента ChooseOne', () => {

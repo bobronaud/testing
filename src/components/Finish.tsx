@@ -20,7 +20,7 @@ const Finish = () => {
 
   return (
     <Box
-      overflow="auto"
+      overflow='auto'
       sx={{
         height: isDesktopUsing ? '80%' : null,
         width: isDesktopUsing ? '80%' : null,
@@ -30,8 +30,8 @@ const Finish = () => {
         gap: 3,
         padding: 5,
       }}
-    >
-      <Typography align="center" variant="h5" component="h1">
+      data-testid='finishPage'>
+      <Typography align='center' variant='h5' component='h1'>
         Итоги теста
       </Typography>
       {result.map((item, index) => {
@@ -39,7 +39,7 @@ const Finish = () => {
           case 'chooseOne': {
             return (
               <Box key={item.question}>
-                <Typography sx={{ mb: 1 }} variant="body1" component="h3">
+                <Typography sx={{ mb: 1 }} variant='body1' component='h3'>
                   {`${index + 1}. ${item.question}`}
                 </Typography>
                 {item.answers?.map((answer) => {
@@ -60,7 +60,7 @@ const Finish = () => {
           case 'chooseMany': {
             return (
               <Box key={item.question}>
-                <Typography sx={{ mb: 1 }} variant="body1" component="h3">
+                <Typography sx={{ mb: 1 }} variant='body1' component='h3'>
                   {`${index + 1}. ${item.question}`}
                 </Typography>
                 {item.answers?.map((answer) => {
@@ -87,13 +87,13 @@ const Finish = () => {
           case 'fill': {
             return (
               <Box key={item.question}>
-                <Typography sx={{ mb: 1 }} variant="body1" component="h3">
+                <Typography sx={{ mb: 1 }} variant='body1' component='h3'>
                   {`${index + 1}. ${item.question}`}
                 </Typography>
-                <Typography variant="subtitle2">
+                <Typography variant='subtitle2'>
                   - Ваш ответ: {item.userAnswer}
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant='body2'>
                   - Верный ответ: {item.rightAnswer}
                 </Typography>
               </Box>
@@ -102,14 +102,14 @@ const Finish = () => {
           case 'detailed': {
             return (
               <Box key={item.question}>
-                <Typography sx={{ mb: 1 }} variant="body1" component="h3">
+                <Typography sx={{ mb: 1 }} variant='body1' component='h3'>
                   {`${index + 1}. ${item.question}`}
                 </Typography>
-                <Typography variant="subtitle2">
+                <Typography variant='subtitle2'>
                   - Ваш ответ: {item.userAnswer}
                 </Typography>
-                <Typography variant="body2">- Верный ответ: -</Typography>
-                <Typography variant="body2">
+                <Typography variant='body2'>- Верный ответ: -</Typography>
+                <Typography variant='body2'>
                   *Требуется проверка преподователем
                 </Typography>
               </Box>
@@ -119,7 +119,7 @@ const Finish = () => {
             throw new Error('unrecognizable type');
         }
       })}
-      <Button sx={{ width: 200 }} variant="contained" onClick={handleClick}>
+      <Button sx={{ width: 200 }} variant='contained' onClick={handleClick}>
         Пройти еще раз
       </Button>
     </Box>

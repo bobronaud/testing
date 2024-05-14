@@ -27,7 +27,7 @@ const Stepper = () => {
                 <StepLabel disabled></StepLabel>
               </Step>
             ))}
-          </StepperMui>{' '}
+          </StepperMui>
         </Box>
       ) : (
         <Typography data-testid='stepper' variant='body1'>{`Вопрос ${currentStep + 1}/${
