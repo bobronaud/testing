@@ -4,6 +4,7 @@ import { State } from '../store/slices/testSlice';
 import renderWithRedux from './helpers/renderWithRedux';
 import { chooseMany, chooseOne } from './__fixtures__/questionsData';
 import { getByTestId } from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 
 describe('тест компонента Start', () => {
   const initialState = {
@@ -27,7 +28,9 @@ describe('тест компонента Start', () => {
     const { getByRole } = renderWithRedux(<Start />, initialState);
     const cheker = getByRole('checkbox');
     expect(cheker).toBeChecked();
-    await userEvent.click(cheker);
+    await act(async () => {
+      await userEvent.click(cheker);
+    });
     expect(cheker).not.toBeChecked();
   });
 });

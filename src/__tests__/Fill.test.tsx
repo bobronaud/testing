@@ -3,6 +3,7 @@ import Fill from '../components/question/Fill';
 import { State } from '../store/slices/testSlice';
 import { chooseMany, fill } from './__fixtures__/questionsData';
 import renderWithRedux from './helpers/renderWithRedux';
+import { act } from 'react-dom/test-utils';
 
 describe('тест компонента Fill', () => {
   const initialState = {
@@ -29,16 +30,26 @@ describe('тест компонента Fill', () => {
     expect(input).toHaveFocus();
 
     const btn = getByRole('button');
-    await userEvent.click(btn);
+    await act(async () => {
+      await userEvent.click(btn);
+    });
     const errorText = getByText(/Необходимо ввести ответ/i);
     expect(errorText).toBeInTheDocument();
 
-    await userEvent.type(input, '\n      ');
-    await userEvent.click(btn);
+    await act(async () => {
+      await userEvent.type(input, '\n      ');
+    });
+    await act(async () => {
+      await userEvent.click(btn);
+    });
     expect(errorText).toBeInTheDocument();
 
-    await userEvent.clear(input);
-    await userEvent.type(input, 'ответ');
+    await act(async () => {
+      await userEvent.clear(input);
+    });
+    await act(async () => {
+      await userEvent.type(input, 'ответ');
+    });
     const error = queryByText(/Необходимо ввести ответ/i);
     expect(error).not.toBeInTheDocument();
   });
@@ -47,8 +58,12 @@ describe('тест компонента Fill', () => {
     const { queryByText, getByText, getByRole } = renderWithRedux(<Fill />, initialState);
     const input = getByRole('textbox');
     const btn = getByRole('button');
-    await userEvent.type(input, 'правильный ответ');
-    await userEvent.click(btn);
+    await act(async () => {
+      await userEvent.type(input, 'правильный ответ');
+    });
+    await act(async () => {
+      await userEvent.click(btn);
+    });
     const prevQuestion = queryByText(fill.question);
     const nextQuestion = getByText(chooseMany.question);
     expect(prevQuestion).not.toBeInTheDocument();

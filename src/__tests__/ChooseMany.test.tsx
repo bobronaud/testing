@@ -3,6 +3,7 @@ import ChooseMany from '../components/question/ChooseMany';
 import { chooseMany, chooseOne } from './__fixtures__/questionsData';
 import renderWithRedux from './helpers/renderWithRedux';
 import { State } from '../store/slices/testSlice';
+import { act } from 'react-dom/test-utils';
 
 describe('тест компонента ChooseMany', () => {
   const initialState = {
@@ -27,7 +28,9 @@ describe('тест компонента ChooseMany', () => {
     const { getByText, getByRole } = renderWithRedux(<ChooseMany />, initialState);
 
     const btn = getByRole('button');
-    await userEvent.click(btn);
+    await act(async () => {
+      await userEvent.click(btn);
+    });
     const errorText = getByText(/Необходимо выбрать ответ/i);
     expect(errorText).toBeInTheDocument();
   });
@@ -35,7 +38,9 @@ describe('тест компонента ChooseMany', () => {
   test('работоспособность чекеров', async () => {
     const { getByRole } = renderWithRedux(<ChooseMany />, initialState);
     const checkbox = getByRole('checkbox', { name: /анна ахматова/i });
-    await userEvent.click(checkbox);
+    await act(async () => {
+      await userEvent.click(checkbox);
+    });
     const checkBoxAfterClick = getByRole('checkbox', { name: /анна ахматова/i });
     expect(checkBoxAfterClick).toBeChecked();
   });
@@ -46,9 +51,13 @@ describe('тест компонента ChooseMany', () => {
       initialState,
     );
     const checkbox = getByRole('checkbox', { name: /анна ахматова/i });
-    await userEvent.click(checkbox);
+    await act(async () => {
+      await userEvent.click(checkbox);
+    });
     const btn = getByRole('button');
-    await userEvent.click(btn);
+    await act(async () => {
+      await userEvent.click(btn);
+    });
     const prevQuestion = queryByText(chooseMany.question);
     const nextQuestion = getByText(chooseOne.question);
     expect(prevQuestion).not.toBeInTheDocument();

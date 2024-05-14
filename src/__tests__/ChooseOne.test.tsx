@@ -1,8 +1,9 @@
 import userEvent from '@testing-library/user-event';
 import ChooseOne from '../components/question/ChooseOne';
-import { Question, State } from '../store/slices/testSlice';
+import { State } from '../store/slices/testSlice';
 import { chooseMany, chooseOne } from './__fixtures__/questionsData';
 import renderWithRedux from './helpers/renderWithRedux';
+import { act } from 'react-dom/test-utils';
 
 describe('тест компонента ChooseOne', () => {
   const initialState = {
@@ -26,7 +27,9 @@ describe('тест компонента ChooseOne', () => {
   test('ошибка при сабмите без выбора ответа', async () => {
     const { getByText, getByRole } = renderWithRedux(<ChooseOne />, initialState);
     const btn = getByRole('button');
-    await userEvent.click(btn);
+    await act(async () => {
+      await userEvent.click(btn);
+    });
     const errorText = getByText(/необходимо выбрать ответ/i);
     expect(errorText).toBeInTheDocument();
   });
@@ -34,7 +37,9 @@ describe('тест компонента ChooseOne', () => {
   test('работоспоосбность радиокнопок', async () => {
     const { getByRole } = renderWithRedux(<ChooseOne />, initialState);
     const radio = getByRole('radio', { name: /кот/i });
-    await userEvent.click(radio);
+    await act(async () => {
+      await userEvent.click(radio);
+    });
     const radioAfterClick = getByRole('radio', { name: /кот/i });
     expect(radioAfterClick).toBeChecked();
   });
@@ -46,8 +51,12 @@ describe('тест компонента ChooseOne', () => {
     );
     const btn = getByRole('button');
     const radio = getByRole('radio', { name: /кот/i });
-    await userEvent.click(radio);
-    await userEvent.click(btn);
+    await act(async () => {
+      await userEvent.click(radio);
+    });
+    await act(async () => {
+      await userEvent.click(btn);
+    });
     const prevQuestion = queryByText(chooseOne.question);
     const nextQuestion = getByText(chooseMany.question);
     expect(prevQuestion).not.toBeInTheDocument();
