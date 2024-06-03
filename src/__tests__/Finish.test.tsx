@@ -1,6 +1,5 @@
 import Finish from '../components/Finish';
-import { State } from '../store/slices/testSlice';
-import { fill, chooseMany } from './__fixtures__/questionsData';
+import { State } from '../types/state';
 import result from './__fixtures__/resultData';
 import renderWithRedux from './helpers/renderWithRedux';
 

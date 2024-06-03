@@ -1,6 +1,4 @@
-import { current } from '@reduxjs/toolkit';
 import testSlice, {
-  State,
   finishStep,
   resetProgress,
   setDataApp,
@@ -11,6 +9,7 @@ import testSlice, {
   writeAnswer,
 } from '../store/slices/testSlice';
 import { chooseMany, chooseOne, detailed, fill } from './__fixtures__/questionsData';
+import { Question, State } from '../types/state';
 
 describe('тест редьюсера', () => {
   const state = {
@@ -99,7 +98,7 @@ describe('тест редьюсера', () => {
   });
 
   test('uploadQuestions', () => {
-    const questions = [chooseMany, chooseOne, fill];
+    const questions = [chooseMany, chooseOne, fill] as Question[];
     const expected = { ...state, questions, currentQuestion: questions[0] };
     expect(testSlice(state, uploadQuestions(questions))).toEqual(expected);
   });

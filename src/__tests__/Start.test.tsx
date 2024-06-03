@@ -1,10 +1,8 @@
 import userEvent from '@testing-library/user-event';
 import Start from '../components/Start';
-import { State } from '../store/slices/testSlice';
 import renderWithRedux from './helpers/renderWithRedux';
-import { chooseMany, chooseOne } from './__fixtures__/questionsData';
-import { getByTestId } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
+import { State } from '../types/state';
 
 describe('тест компонента Start', () => {
   const initialState = {

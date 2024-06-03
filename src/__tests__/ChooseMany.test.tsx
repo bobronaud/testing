@@ -2,8 +2,8 @@ import userEvent from '@testing-library/user-event';
 import ChooseMany from '../components/question/ChooseMany';
 import { chooseMany, chooseOne } from './__fixtures__/questionsData';
 import renderWithRedux from './helpers/renderWithRedux';
-import { State } from '../store/slices/testSlice';
 import { act } from 'react-dom/test-utils';
+import { State } from '../types/state';
 
 describe('тест компонента ChooseMany', () => {
   const initialState = {

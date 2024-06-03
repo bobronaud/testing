@@ -1,7 +1,7 @@
 import userEvent from '@testing-library/user-event';
 import App from '../App';
-import { State } from '../store/slices/testSlice';
 import renderWithRedux from './helpers/renderWithRedux';
+import { State } from '../types/state';
 
 describe('тест App.tsx', () => {
   test('запуск теста', async () => {

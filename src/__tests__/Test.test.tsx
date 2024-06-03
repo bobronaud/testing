@@ -1,5 +1,5 @@
 import Test from '../components/Test';
-import { State } from '../store/slices/testSlice';
+import { State } from '../types/state';
 import { chooseMany } from './__fixtures__/questionsData';
 import renderWithRedux from './helpers/renderWithRedux';
 

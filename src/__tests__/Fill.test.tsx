@@ -1,9 +1,9 @@
 import userEvent from '@testing-library/user-event';
 import Fill from '../components/question/Fill';
-import { State } from '../store/slices/testSlice';
 import { chooseMany, fill } from './__fixtures__/questionsData';
 import renderWithRedux from './helpers/renderWithRedux';
 import { act } from 'react-dom/test-utils';
+import { State } from '../types/state';
 
 describe('тест компонента Fill', () => {
   const initialState = {
