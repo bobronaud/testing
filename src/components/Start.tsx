@@ -8,10 +8,11 @@ import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import type { Question } from '../store/slices/testSlice';
-import { setPhase, setTimer, uploadQuestions } from '../store/slices/testSlice';
+import { setPhase, uploadQuestions } from '../store/slices/testSlice';
 import { useAppDispatch } from '../hooks';
 import data from '../assets/test.json';
+import { setTimer } from '../store/slices/testSlice';
+import { Question } from '../types/state';
 
 const Start = () => {
   const dispatch = useAppDispatch();
@@ -41,16 +42,15 @@ const Start = () => {
         alignItems: 'center',
         gap: 3,
         padding: 5,
-      }}
-    >
-      <Typography variant="h4" component="h1">
+      }}>
+      <Typography variant='h4' component='h1'>
         Тестирование
       </Typography>
       <FormControlLabel
         control={<Switch checked={checked} onChange={handleChange} />}
-        label="Ограничение по времени: 5мин"
+        label='Ограничение по времени: 5мин'
       />
-      <Button variant="contained" onClick={handleclick}>
+      <Button variant='contained' onClick={handleclick}>
         Начать
       </Button>
     </Box>

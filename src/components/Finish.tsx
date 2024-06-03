@@ -6,12 +6,13 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { useAppSelector, useAppDispatch } from '../hooks';
 import { setPhase, resetProgress } from '../store/slices/testSlice';
+import { getResult } from '../store/selectors/getResult';
 
 const Finish = () => {
   const dispatch = useAppDispatch();
   const theme = useTheme();
   const isDesktopUsing = useMediaQuery(theme.breakpoints.up('md'));
-  const { result } = useAppSelector((state) => state.test);
+  const result = useAppSelector(getResult);
 
   const handleClick = () => {
     dispatch(resetProgress());

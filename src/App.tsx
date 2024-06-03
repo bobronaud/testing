@@ -7,9 +7,10 @@ import Start from './components/Start';
 import Test from './components/Test';
 import Finish from './components/Finish';
 
-import type { Phase } from './store/slices/testSlice';
 import { useAppSelector, useAppDispatch, useSessionStorage } from './hooks';
 import { setDataApp, setPhase } from './store/slices/testSlice';
+import { getPhase } from './store/selectors/getPhase';
+import { getState } from './store/selectors/getState';
 
 type Phases = {
   [key: string]: () => JSX.Element;
@@ -19,8 +20,8 @@ const App = () => {
   const dispatch = useAppDispatch();
   const theme = useTheme();
   const isDesktopUsing = useMediaQuery(theme.breakpoints.up('md'));
-  const type = useAppSelector((state) => state.test.phase) as Phase;
-  const state = useAppSelector((state) => state.test);
+  const type = useAppSelector(getPhase);
+  const state = useAppSelector(getState);
   const key = 'data';
   const [data, setData] = useSessionStorage(key);
 
@@ -57,8 +58,7 @@ const App = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: isDesktopUsing ? 'center' : 'start',
-      }}
-    >
+      }}>
       {type && <Phase />}
     </Box>
   );

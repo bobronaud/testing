@@ -8,11 +8,12 @@ import Timer from './Timer';
 import QuestionRoot from './question';
 
 import { useAppSelector } from '../hooks';
+import { getTimer } from '../store/selectors/getTimer';
 
 const Test = () => {
   const theme = useTheme();
   const isDesktopUsing = useMediaQuery(theme.breakpoints.up('md'));
-  const { timer } = useAppSelector((state) => state.test);
+  const timer = useAppSelector(getTimer);
 
   const style = {
     width: isDesktopUsing ? '60%' : null,

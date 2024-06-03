@@ -1,33 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../store';
+import { State, Answer, Phase, Question } from '../../types/state';
 
-export type Question = {
-  type: string;
-  question: string;
-  answers: string[] | null;
-  rightAnswer: string | string[] | null;
-};
-
-export type Answer = Question & {
-  userAnswer: string;
-};
-
-export type Phase = 'starting' | 'inProcess' | 'finished';
-
-type Completed = {
-  [key: number]: boolean;
-};
-
-export type State = {
-  timer: boolean;
-  time: [number, number];
-  phase: Phase | null;
-  questions: Question[];
-  currentQuestion: Question | null;
-  currentStep: number;
-  completedSteps: Completed;
-  result: Answer[];
-};
 const initialState: State = {
   timer: true,
   time: [5, 0],
@@ -88,7 +61,6 @@ const testSlice = createSlice({
 });
 
 export default testSlice.reducer;
-export const selectCards = (state: RootState) => state.test;
 export const {
   writeAnswer,
   finishStep,

@@ -10,10 +10,11 @@ import Typography from '@mui/material/Typography';
 
 import { useAppSelector, useAppDispatch } from '../../hooks';
 import { writeAnswer, finishStep } from '../../store/slices/testSlice';
+import { getCurrentQuestion } from '../../store/selectors/getCurrentQuestion';
 
 const ChooseOne = () => {
   const dispatch = useAppDispatch();
-  const { currentQuestion } = useAppSelector((state) => state.test);
+  const currentQuestion = useAppSelector(getCurrentQuestion);
 
   const [value, setValue] = useState('');
   const [error, setError] = useState(false);
@@ -37,7 +38,7 @@ const ChooseOne = () => {
 
   return (
     <Box>
-      <Typography variant="h6" component="h3" sx={{ my: 1 }}>
+      <Typography variant='h6' component='h3' sx={{ my: 1 }}>
         {currentQuestion?.question}
       </Typography>
       <FormControl error={error}>
@@ -47,7 +48,7 @@ const ChooseOne = () => {
           ))}
         </RadioGroup>
         <FormHelperText>{helperText}</FormHelperText>
-        <Button sx={{ mt: 1 }} variant="contained" onClick={handleClick}>
+        <Button sx={{ mt: 1 }} variant='contained' onClick={handleClick}>
           Ответить
         </Button>
       </FormControl>

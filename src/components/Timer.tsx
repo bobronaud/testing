@@ -4,11 +4,13 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 import { useAppDispatch, useAppSelector } from '../hooks';
-import { setPhase, setTime } from '../store/slices/testSlice';
+import { setTime } from '../store/slices/testSlice';
+import { setPhase } from '../store/slices/testSlice';
+import { getTime } from '../store/selectors/getTime';
 
 const Timer = () => {
   const dispatch = useAppDispatch();
-  const [m, s] = useAppSelector((state) => state.test.time);
+  const [m, s] = useAppSelector(getTime);
   const [over, setOver] = useState(false);
 
   const tick = () => {

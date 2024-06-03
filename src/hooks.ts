@@ -7,7 +7,7 @@ export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
 type Output = [string | null, (k: string, v: string) => void];
 
-export const useSessionStorage = (key: string, defaultValue?: string): Output => {
+export const useSessionStorage = (key: string): Output => {
   const value = sessionStorage.getItem(key);
   const setValue = (k: string, v: string) => {
     sessionStorage.setItem(k, v);
